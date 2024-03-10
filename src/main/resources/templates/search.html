@@ -1,0 +1,19 @@
+<div th:fragment="searchFragment">
+    <div class="input-group m-3" style="max-width:500px;">
+        <input type="text" class="form-control kw" name="ipClass" placeholder="12.34.56.78/32" th:value="${''}">
+        <button class="btn btn-primary" type="button" id="btn_search">IP 검색</button>
+    </div>
+    <form id="searchForm" method="get">
+        <input type="hidden" id="ip" name="ip" th:value="${''}">
+        <input type="hidden" id="page" name="page" th:value="${paging.number}">
+    </form>
+    <script type='text/javascript' th:nonce="${nonce}">
+        $(document).ready(function(){
+            $("#btn_search").on('click', function() {
+                $("#ip").val($(".kw").val());
+                $("#page").val(0);  // 검색버튼을 클릭할 경우 1페이지부터 조회한다.
+                $("#searchForm").submit();
+            });
+        });
+    </script>
+</div>

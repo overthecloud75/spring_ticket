@@ -1,0 +1,26 @@
+<table th:fragment="tableFragment" class="table">
+    <thead>
+        <tr class="table-dark">
+            <th class="text-center align-middle">번호</th>
+            <th class="text-center align-middle" th:each="header : ${headerList}" th:text="${header}"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="data, loop : ${paging}">
+            <td class="text-center align-middle" th:text="${(paging.number * paging.size) + loop.index + 1}"></td>
+            <td class="text-center align-middle" th:text="${data.timestamp}"></td>
+            <td class="text-center align-middle">
+                <a th:href="@{|/ticket/${data.ticket}|}" th:text="${data.ticket}"></a>
+            </td>
+            <td class="text-center align-middle" th:text="${data.site}"></td>
+            <td class="text-center align-middle" th:text="${data.ip}"></td>
+            <td class="text-center align-middle" th:text="${data.geo_ip}"></td>
+            <td class="text-center align-middle" th:text="${data.attack_no}"></td>
+            <td class="text-center align-middle" th:text="${data.attack_w}"></td>
+            <td class="text-center align-middle" th:text="${data.attack_24}"></td>
+            <td class="text-center align-middle" th:text="${data.origin}"></td>
+            <td class="text-center align-middle" th:text="${data.fix}"></td>
+            <td class="text-center align-middle" th:text="${data.fix_timestamp}"></td>
+        </tr>
+    </tbody>
+</table>

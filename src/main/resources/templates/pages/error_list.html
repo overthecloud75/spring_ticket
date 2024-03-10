@@ -1,0 +1,7 @@
+<html layout:decorate="~{base}">
+    <div layout:fragment="content" class="container-fluid my-3">
+        <nav th:replace="~{search :: searchFragment}"></nav>
+        <nav th:replace="~{errorTable :: tableFragment}"></nav>
+        <nav th:replace="~{paging :: pagingFragment}"></nav>
+    </div>
+</html>

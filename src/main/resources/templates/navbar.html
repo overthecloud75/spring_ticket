@@ -1,0 +1,31 @@
+<nav th:fragment="navbarFragment" class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">Ticket Management</a>
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav me-auto mb-2 mb-lg-0 nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link" th:classappend="${uri == '/ticket/' ? 'active':''}" href="/ticket/">Ticket</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:classappend="${uri == '/firewall/' ? 'active':''}" href="/firewall/">Firewall</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:classappend="${uri == '/access_log/' ? 'active':''}" href="/access_log/">Access Log</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:classappend="${uri == '/error_log/' ? 'active':''}" href="/error_log/">Error Log</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:classappend="${uri == '/waf_log/' ? 'active':''}" href="/waf_log/">WAF Log</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:classappend="${uri == '/load_chart/' ? 'active':''}" href="/load_chart/">Load Chart</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

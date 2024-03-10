@@ -1,0 +1,24 @@
+<table th:fragment="tableFragment" class="table">
+    <thead>
+        <tr class="table-dark">
+            <th class="text-center align-middle">번호</th>
+            <th class="text-center align-middle" th:each="header : ${headerList}" th:text="${header}"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="data, loop : ${paging}">
+            <td class="text-center align-middle" th:text="${(paging.number * paging.size) + loop.index + 1}"></td>
+            <td class="text-center align-middle" th:text="${data.timestamp}"></td>
+            <td class="text-center align-middle" th:text="${data.ip}"></td>
+            <td class="text-center align-middle" th:text="${data.geo_ip}"></td>
+            <td class="text-center align-middle" th:text="${data.host}"></td>
+            <td class="text-center align-middle" th:text="${data.http_version}"></td>
+            <td class="text-center align-middle" th:text="${data.method}"></td>
+            <td class="text-center align-middle" th:text="${data.url}"></td>
+            <td class="text-center align-middle" th:text="${data.waf_id}"></td>
+            <td class="text-center align-middle" th:text="${data.waf_event}"></td>
+            <td class="text-center align-middle" th:text="${data.waf_data}"></td>
+            <td class="text-center align-middle" th:text="${data.waf_severity}"></td>
+        </tr>
+    </tbody>
+</table>

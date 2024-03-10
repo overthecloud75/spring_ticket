@@ -1,0 +1,29 @@
+ <!-- 페이징처리 시작 -->
+ <div th:fragment="pagingFragment" th:if="${!paging.isEmpty()}">
+    <ul class="pagination justify-content-center">
+        <li class="page-item" th:classappend="${!paging.hasPrevious} ? 'disabled'">
+            <a class="page-link"
+                th:href="@{|?ip=${ip}&page=0|}">
+                <span>처음</span>
+            </a>
+        </li>
+        <li class="page-item" th:classappend="${!paging.hasPrevious} ? 'disabled'">
+            <a class="page-link"
+                th:href="@{|?ip=${ip}&page=${paging.number-1}|}">
+                <span>이전</span>
+            </a>
+        </li>
+        <li th:each="page: ${#numbers.sequence(0, paging.totalPages-1)}" 
+            th:if="${page >= paging.number and page <= paging.number+10}"
+            th:classappend="${page == paging.number} ? 'active'" 
+            class="page-item">
+            <a th:text="${page}" class="page-link" th:href="@{|?ip=${ip}&page=${page}|}"></a>
+        </li>
+        <li class="page-item" th:classappend="${!paging.hasNext} ? 'disabled'">
+            <a class="page-link" th:href="@{|?ip=${ip}&page=${paging.number+1}|}">
+                <span>다음</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<!-- 페이징처리 끝 -->
