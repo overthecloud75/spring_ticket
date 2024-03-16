@@ -27,9 +27,9 @@
 					<artifactId>spring-boot-starter-tomcat</artifactId>
 				</exclusion>
 				<exclusion>
-					<groupId>ch.qos.logback</groupId>
-					<artifactId>logback-classic</artifactId>
-				</exclusion>
+                    <groupId>ch.qos.logback</groupId>
+                    <artifactId>logback-classic</artifactId>
+                </exclusion>
 			</exclusions>
 		</dependency>
 		<dependency>

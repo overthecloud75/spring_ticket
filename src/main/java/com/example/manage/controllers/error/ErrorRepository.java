@@ -1,4 +1,4 @@
-package com.example.manage.error;
+package com.example.manage.controllers.error;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.domain.Page;

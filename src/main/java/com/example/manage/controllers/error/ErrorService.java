@@ -1,4 +1,4 @@
-package com.example.manage.error;
+package com.example.manage.controllers.error;
 
 import java.util.ArrayList;
 import java.util.List;

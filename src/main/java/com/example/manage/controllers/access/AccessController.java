@@ -1,4 +1,4 @@
-package com.example.manage.access;
+package com.example.manage.controllers.access;
 
 import java.util.UUID;
 import java.util.List;
@@ -26,6 +26,7 @@ public class AccessController {
     @GetMapping("/access_log/")
     public String list(HttpServletRequest request, Model model, @RequestParam(value="ip", defaultValue="") String ip, @RequestParam(value="page", defaultValue="0") int page) {
         Page<Access> paging = this.service.getList(ip, page); 
+        model.addAttribute("uri", request.getRequestURI());
         model.addAttribute("headerList", headerList);
         model.addAttribute("accessorList", accessorList);
         model.addAttribute("ip", ip);

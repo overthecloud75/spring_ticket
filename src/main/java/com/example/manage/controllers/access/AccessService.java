@@ -1,4 +1,4 @@
-package com.example.manage.access;
+package com.example.manage.controllers.access;
 
 import java.util.ArrayList;
 import java.util.List;

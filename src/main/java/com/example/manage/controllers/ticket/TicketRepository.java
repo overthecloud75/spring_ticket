@@ -1,4 +1,4 @@
-package com.example.manage.ticket;
+package com.example.manage.controllers.ticket;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.domain.Page;

@@ -8,8 +8,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.example.manage.error.Error;
-import com.example.manage.error.ErrorRepository;
+import com.example.manage.controllers.error.Error;
+import com.example.manage.controllers.error.ErrorRepository;
 
 
 @SpringBootTest
