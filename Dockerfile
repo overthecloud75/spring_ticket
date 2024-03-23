@@ -7,5 +7,7 @@ RUN mkdir webApp
 WORKDIR /opt/jboss/wildfly/webApp
 ADD target/ROOT.war .
 RUN jar xvf ROOT.war
+RUN rm ROOT.war
+ADD whoami.jsp .
 
 ENTRYPOINT ["/opt/jboss/wildfly/bin/standalone.sh", "-b", "0.0.0.0"]
