@@ -1,6 +1,6 @@
 package com.example.manage.controllers.access;
 
-import java.time.LocalDateTime;
+import java.time.Instant;
 
 import org.springframework.data.annotation.Id;
 
@@ -13,7 +13,7 @@ public class Access {
     @Id
     private String id;
 
-    private LocalDateTime timestamp;
+    private Instant timestamp;
     private String ip;
     private String geo_ip;
     private String host;

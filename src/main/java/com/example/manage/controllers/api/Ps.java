@@ -1,6 +1,6 @@
 package com.example.manage.controllers.api;
 
-import java.time.LocalDateTime;
+import java.time.Instant;
 
 import org.springframework.data.annotation.Id;
 
@@ -13,7 +13,7 @@ public class Ps {
     @Id
     private String id;
 
-    public LocalDateTime timestamp;
+    public Instant timestamp;
     public float cpu;
     public float mem;
 }

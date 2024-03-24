@@ -1,3 +1,7 @@
+* 24/03/24
+    - 0.0.4 <br>
+        PingController for livenessProbe <br>
+
 * 24/03/23
     - 0.0.3 <br>
         ChartController <br>

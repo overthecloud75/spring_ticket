@@ -1,4 +1,9 @@
 FROM quay.io/wildfly/wildfly:27.0.0.Final-jdk17
+
+USER 0
+RUN ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
+USER jboss
+
 WORKDIR /opt/jboss/wildfly
 RUN cp standalone/configuration/standalone.xml standalone/configuration/standalone.xml.old
 COPY standalone.xml standalone/configuration/

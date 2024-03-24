@@ -1,6 +1,6 @@
 package com.example.manage.controllers.ticket;
 
-import java.time.LocalDateTime;
+import java.time.Instant;
 
 import org.springframework.data.annotation.Id;
 
@@ -13,8 +13,8 @@ public class Ticket {
     @Id
     private String id;
 
-    private LocalDateTime timestamp;
-    private LocalDateTime fix_timestamp;
+    private Instant timestamp;
+    private Instant fix_timestamp;
     private String ticket;
     private String ip;
     private String geo_ip;
