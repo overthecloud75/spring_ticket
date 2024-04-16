@@ -13,12 +13,11 @@ public class Paging {
     Integer count;
     Boolean hasPrevious = false;
     Boolean hasNext = true;
+    Boolean empty;
 
     public boolean isEmpty() {
-        if (count == 0) {
-            return true;
-        } else {
-            return false;
-        }
+        if (count == 0) { empty = true;} 
+        else { empty = false; }
+        return empty;
     }
 }

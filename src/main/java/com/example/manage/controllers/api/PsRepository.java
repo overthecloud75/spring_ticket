@@ -8,5 +8,5 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 public interface PsRepository extends MongoRepository<Ps, String> {
 
-    List<Ps> findByTimestampBetweenOrderByTimestampDesc(Instant oneDayAgo, Instant currentDateTime);
+    List<Ps> findByTimestampBetweenOrderByTimestampAsc(Instant oneDayAgo, Instant currentDateTime);
 }

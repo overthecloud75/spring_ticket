@@ -1,3 +1,7 @@
+* 24/04/16
+    - 0.0.5 <br>
+        Load chart x-axis with timestamp <br>
+
 * 24/03/24
     - 0.0.4 <br>
         PingController for livenessProbe <br>
