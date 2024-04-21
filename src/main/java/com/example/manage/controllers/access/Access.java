@@ -13,7 +13,7 @@ public class Access {
     @Id
     private String id;
 
-    private Instant timestamp;
+    public Instant timestamp;
     private String ip;
     private String geo_ip;
     private String host;

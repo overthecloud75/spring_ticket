@@ -1,3 +1,7 @@
+* 24/04/21
+    - 0.0.6 <br>
+        Access Bar chart <br>
+
 * 24/04/16
     - 0.0.5 <br>
         Load chart x-axis with timestamp <br>

@@ -5,8 +5,7 @@
     
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <!--<script th:text="${nonce}">-->
-    <script nonce="" th:inline="javascript">
+    <script th:nonce="${nonce}" th:inline="javascript">
         const ctx = document.getElementById('myChart')
         $(document).ready(function(){
             $.ajax({

@@ -19,9 +19,16 @@ public class ApiController {
 
     @GetMapping("/loads")
     @ResponseBody
-    public Map<String, Object> list(Model model) {
-        Map<String, Object> loadDict = this.service.getDict();
+    public Map<String, Object> getLoadDict(Model model) {
+        Map<String, Object> loadDict = this.service.getLoadDict();
         return loadDict;
+    }
+
+    @GetMapping("/bar")
+    @ResponseBody
+    public Map<String, Object> getBarDict(Model model) {
+        Map<String, Object> barDict = this.service.getBarDict();
+        return barDict;
     }
 }
 

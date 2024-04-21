@@ -1,0 +1,43 @@
+<div th:fragment="barFragment">
+    <div>
+        <canvas id="myChart"></canvas>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script th:nonce="${nonce}" th:inline="javascript">
+        const ctx = document.getElementById('myChart')
+
+        $(document).ready(function(){
+            $.ajax({
+                type: 'get',
+                url : [[${apiUrl}]],
+                dataType: 'json', 
+                success: function(result){
+                    const data = {
+                        labels: result.timestamp,
+                        datasets: [{
+                            label: 'access_log',
+                            data: result.count
+                        }]
+                    }
+                    const config = {
+                        type: 'bar',
+                        data: data,
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        },
+                    };
+                    new Chart(ctx, config)
+                },
+                error:function(err){  
+                    console.log(err)
+                }
+            })
+        })
+    </script>
+</div>
